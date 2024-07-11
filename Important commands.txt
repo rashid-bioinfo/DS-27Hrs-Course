@@ -1,0 +1,10 @@
+dataset = pd.read_csv('titanic.csv')
+
+dataset.head(3)
+
+# To check if data has any null value
+dataset.isnull().sum()
+
+# To remove null value in the data
+
+dataset['Age'].fillna(dataset['Age'].mean(),inplace=True)
